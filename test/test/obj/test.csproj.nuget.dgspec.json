@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\omid_\\source\\repos\\Test\\test\\test.csproj": {}
+    "C:\\Users\\omid_\\Documents\\GitHub\\-Algorithm_Training\\test\\test\\test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\omid_\\source\\repos\\Test\\test\\test.csproj": {
+    "C:\\Users\\omid_\\Documents\\GitHub\\-Algorithm_Training\\test\\test\\test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\omid_\\source\\repos\\Test\\test\\test.csproj",
+        "projectUniqueName": "C:\\Users\\omid_\\Documents\\GitHub\\-Algorithm_Training\\test\\test\\test.csproj",
         "projectName": "test",
-        "projectPath": "C:\\Users\\omid_\\source\\repos\\Test\\test\\test.csproj",
+        "projectPath": "C:\\Users\\omid_\\Documents\\GitHub\\-Algorithm_Training\\test\\test\\test.csproj",
         "packagesPath": "C:\\Users\\omid_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\omid_\\source\\repos\\Test\\test\\obj\\",
+        "outputPath": "C:\\Users\\omid_\\Documents\\GitHub\\-Algorithm_Training\\test\\test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\omid_\\AppData\\Roaming\\NuGet\\NuGet.Config",

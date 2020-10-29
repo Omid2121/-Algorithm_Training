@@ -10,27 +10,27 @@ namespace test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(test(4, 5, 7));
-            Console.WriteLine(test(7, 4, 12));
-            Console.WriteLine(test(10, 10, 12));
-            Console.WriteLine(test(12, 12, 18));
-            Console.WriteLine(test(12, 12, 12));
+            Console.WriteLine(test("Hello", "Hi"));
+            Console.WriteLine(test("Python", "PHP"));
+            Console.WriteLine(test("JS", "JS"));
+            Console.WriteLine(test("Csharp", ""));
             Console.ReadLine();
         }
 
-        public static int test(int x, int y,int z)
+        public static string test(string str1, string str2)
         {
-            if (x == y)
-                return z;
-            
-            if (x == z)
-                return y;
-            
-            if (y == z)
-                return x;
-            
+            string chars = "";
+            if (str1.Length > 0)
+                chars += str1.Substring(0, 1);
             else
-                return x + y + z;
+            chars += "#";
+
+            if (str2.Length > 0)
+                chars += str2.Substring(str2.Length - 1);
+            else
+                chars += "#";
+
+            return chars;
         }
     }
 }

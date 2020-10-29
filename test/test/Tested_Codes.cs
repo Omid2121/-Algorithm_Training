@@ -1091,122 +1091,457 @@ namespace test
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(4, 5, 7));
+            Console.WriteLine(test(7, 4, 12));
+            Console.WriteLine(test(10, 13, 12));
+            Console.WriteLine(test(13, 12, 18));
+            Console.ReadLine();
+        }
+
+        public static int test(int x, int y,int z)
+        {
+            if (x == 13)
+                return 0;
+            if (y == 13)
+                return x;
+            if (z == 13)
+                return x + y;
+            else
+                return x + y + z;
+        }
+
+
+
+    //*
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(4, 5, 7));
+            Console.WriteLine(test(7, 4, 12));
+            Console.WriteLine(test(10, 13, 12));
+            Console.WriteLine(test(17, 12, 18));
 
+            Console.ReadLine();
+        }
+
+        public static int test(int x, int y,int z)
+        {
+            return Nums(x) + Nums(y) + Nums(z);          
+        }
+        public static int Nums(int n)
+        {
+            if ((n > 9 && n < 13) || (n > 17 && n < 21))
+            {
+                return 0;
+            }
+            return n;
+        }
 
 
 
 
 
+      static void Main(string[] args)
+        {
+            Console.WriteLine(test(4, 5));
+            Console.WriteLine(test(7, 12));
+            Console.WriteLine(test(10, 13));
+            Console.WriteLine(test(17, 33));
+            Console.ReadLine();
+        }
 
+        public static int test(int x, int y)
+        {
+            if (x <= 13 || y <= 13)
+            {
+                if (x >= y)
+                {
+                    return x;
+                }
+                return y;
+            }
+            return 0;
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(4, 5, 6));
+            Console.WriteLine(test(7, 12, 13));
+            Console.WriteLine(test(-1, 0, 1));
+            Console.ReadLine();
+        }
 
+        public static bool test(int x, int y, int z)
+        {
+            int val1 = y - x;
+            int val2 = z - y;
+            if (val1 == val2)
+            {
+                return true;
+            }
+            return false;
+        }
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hi", "Hello"));
+            Console.WriteLine(test("whats", "app"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1, string str2)
+        {
+            return str1 + str2 + str2 + str1;
+        }
 
 
 
 
+     static void Main(string[] args)
+        {
+            Console.WriteLine(test("[[]]", "Hello"));
+            Console.WriteLine(test("(())", "Hi"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1, string str2)
+        {
+            return str1.Substring(0, 2) + str2 + str1.Substring(2);
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello"));
+            Console.WriteLine(test("Hi"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            string string1 = str1.Substring (str1.Length - 2);
+            return string1 + string1 + string1;
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello"));
+            Console.WriteLine(test("Hi"));
+            Console.WriteLine(test("H"));
+            Console.WriteLine(test(" "));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            if (str1.Length > 1)
+            {
+                string string1 = str1.Substring(0 ,2);
+                return string1;
+            }
+            return str1;
+        }
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello"));
+            Console.WriteLine(test("Hi"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+                return str1.Substring(0, str1.Length /2);    
+        }
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello"));
+            Console.WriteLine(test("Hi"));
+            Console.WriteLine(test("Python"));
 
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            return str1.Substring(1).Substring(0, str1.Length - 2);
+        }
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello", "Hi"));
+            Console.WriteLine(test("JS","Python"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1,string str2)
+        {
+            if (str1.Length > str2.Length)
+            {
+                return str1 + str2 + str1;
+            }return str2 + str1 + str2;
+        }
 
 
 
 
+     static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello", "Hi"));
+            Console.WriteLine(test("JS","Python"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1,string str2)
+        {
+            return (str1.Substring(1))+( str2.Substring(1));
+        }
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello"));
+            Console.WriteLine(test("JS"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            if (str1.Length > 2)
+            {
+                return str1.Remove(0,2) + str1.Substring(0,2);
+            }
+            return str1;
+        }
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello"));
+            Console.WriteLine(test("JS"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            if (str1.Length > 2)
+            {
+                return str1.Substring(str1.Length -2) + str1.Remove(str1.Length -2);
+            }
+            return str1;
+        }
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello"));
+            Console.WriteLine(test("JS"));
+            Console.WriteLine(test(" "));
 
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            if (str1.Length > 1)
+            {
+                return str1.Substring(1, str1.Length - 2);
+            }
+            return " ";
 
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hell"));
+            Console.WriteLine(test("JS"));
 
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            if (str1.Length > 1)
+            {
+                return str1.Substring(str1.Length / 2 -1, 2);
+            }
+            return " ";
+        }
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello"));
+            Console.WriteLine(test("Python"));
+            Console.WriteLine(test("On"));
+            Console.WriteLine(test("o"));
 
 
+            Console.ReadLine();
+        }
 
+        public static bool test(string str1)
+        {
+            if (str1.ToLower().EndsWith("on"))
+            {
+                return true;
+            }
+            return false;
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello", 1));
+            Console.WriteLine(test("Python", 2));
+            Console.WriteLine(test("On", 1));
+            Console.WriteLine(test("o", 1));
 
 
+            Console.ReadLine();
+        }
 
+        public static string test(string str1, int n)
+        {
+            return str1.Substring(0, n) + str1.Substring(str1.Length -n);
+        }
 
 
 
 
 
+    //*
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello", 1));
+            Console.WriteLine(test("Python", 2));
+            Console.WriteLine(test("On", 1));
 
+            Console.ReadLine();
+        }
 
+        public static string test(string str1, int n)
+        {
+            if (n + 2 <= str1.Length)
+            {
+                return str1.Substring(n, 2);
+            }return str1.Substring(0, 2);
+        }
 
 
 
 
+    // taking 3 chars from mid
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello"));
+            Console.WriteLine(test("Python"));
+            Console.WriteLine(test("abc"));
+            Console.WriteLine(test("AAAAASAAAAA"));
 
 
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            return str1.Substring(str1.Length / 2 - 1, 3);
+        }
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello"));
+            Console.WriteLine(test("Python"));
+            Console.WriteLine(test("a"));
+            Console.WriteLine(test(""));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            if (str1.Length > 1)
+            {
+                return str1.Substring(0,2);
+            }
+            else if (str1.Length == 0)
+            {
+                return "##";
+            }
+            return "#" + str1;
+        }
 
 
+
+
+  
+
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello", "Hi"));
+            Console.WriteLine(test("Python", "PHP"));
+            Console.WriteLine(test("JS", "JS"));
+            Console.WriteLine(test("Csharp", ""));
+            Console.ReadLine();
+        }
+
+        public static string test(string str1, string str2)
+        {
+            string chars = "";
+            if (str1.Length > 0)
+                chars += str1.Substring(0, 1);
+            else
+            chars += "#";
+
+            if (str2.Length > 0)
+                chars += str2.Substring(str2.Length - 1);
+            else
+                chars += "#";
+
+            return chars;
+        }
 
 
 
