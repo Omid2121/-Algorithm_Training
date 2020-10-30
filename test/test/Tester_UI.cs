@@ -10,27 +10,19 @@ namespace test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(test("Hello", "Hi"));
-            Console.WriteLine(test("Python", "PHP"));
-            Console.WriteLine(test("JS", "JS"));
-            Console.WriteLine(test("Csharp", ""));
-            Console.ReadLine();
+            int[] item = test(new[] { 10, 20, -30, -40 });
+
+            Console.Write("Rotated array: ");
+
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
         }
 
-        public static string test(string str1, string str2)
+        public static int[] test(int[] nums)
         {
-            string chars = "";
-            if (str1.Length > 0)
-                chars += str1.Substring(0, 1);
-            else
-            chars += "#";
-
-            if (str2.Length > 0)
-                chars += str2.Substring(str2.Length - 1);
-            else
-                chars += "#";
-
-            return chars;
+            return new int[] { nums[1], nums[2], nums[3], nums[0] };
         }
     }
 }

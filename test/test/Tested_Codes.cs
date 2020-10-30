@@ -1546,94 +1546,338 @@ namespace test
 
 
 
+static void Main(string[] args)
+        {
+            Console.WriteLine(test("abc", "cat"));
+            Console.WriteLine(test("python", "php"));
+            Console.WriteLine(test("php", "php"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1, string str2)
+        {
+            if (str1.Substring(str1.Length - 1) == str2.Substring(0, 1))
+            {
+                return str1.Remove(str1.Length - 1) + str2;
+            }
+            return str1 + str2;
+        }
 
 
 
 
 
+    //replace last char and second last char with one and other.
+            static void Main(string[] args)
+        {
+            Console.WriteLine(test("Hello"));
+            Console.WriteLine(test("python"));
+            Console.WriteLine(test("JS"));
+            Console.WriteLine(test("C"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            if (str1.Length > 1)
+            {
+                return str1.Substring(0, str1.Length - 2) + str1[str1.Length -1] + str1[str1.Length -2];
+            }
+            return str1;
+        }
 
 
 
 
 
 
+     static void Main(string[] args)
+        {
+            Console.WriteLine(test("abc"));
+            Console.WriteLine(test("abcdef"));
+            Console.WriteLine(test("C"));
+            Console.WriteLine(test("xyz"));
+            Console.WriteLine(test("xyzsder"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            if (str1.ToLower().StartsWith("abc"))
+            {
+                return "abc";
+            }
+            else if (str1.ToLower().StartsWith("xyz"))
+            {
+                return "xyz";
+            }
+            return "";
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("abab"));
+            Console.WriteLine(test("abcdef"));
+            Console.WriteLine(test("xyzsderxy"));
+            Console.ReadLine();
+        }
 
+        public static bool test(string str1)
+        {
+            if (str1.Substring(0, 2) == str1.Substring(str1.Length -2))
+            {
+                return true;
+            }return false;
 
 
 
 
 
 
+     static void Main(string[] args)
+        {
+            Console.WriteLine(test("abc", "abcd"));
+            Console.WriteLine(test("Python", "Python"));
+            Console.WriteLine(test("JS", "Python"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1, string str2)
+        {
+            if (str1.Length > str2.Length)
+            {
+                return str1.Substring(str1.Length - str2.Length) + str2;
+            }
+            else if (str1.Length < str2.Length)
+            {
+                return str1 + str2.Substring(str2.Length - str1.Length);
+            }
+            return str1 + str2;
+        }
+
+
+
+
+
+
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("abc"));
+            Console.WriteLine(test("Python"));
+            Console.WriteLine(test("J"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            string extra_Front = "";
 
+            if (str1.Length < 2)
+            {
+                return str1 + str1 + str1;
+            }
+            else
+            {
+                extra_Front = str1.Substring(0, 2);
+                return extra_Front + extra_Front + extra_Front;
+            }
+
+
+
+
+
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("abcab"));
+            Console.WriteLine(test("Python"));
+            Console.ReadLine();
+        }
+
+        public static string test(string str1)
+        {
+            if (str1.Substring(0,2) == str1.Substring(str1.Length -2))
+            {
+                return str1.Remove(0,2);
+            }
+            return str1;
+        }
+
+
+
+
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("abcab"));
+            Console.WriteLine(test("python"));
+            Console.WriteLine(test("press"));
+            Console.WriteLine(test("jython"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            if (str1.StartsWith("p") && str1.Substring(1,1) == "y")
+            {
+                return str1;
+            }
+            else if (str1.StartsWith("p"))
+            {
+                return str1.Substring(0,1) + str1.Remove(0, 2);
+            }
+            else if (str1.Substring(1, 1) == "y")
+            {
+                return str1.Remove(0, 1) ;
+            }
+            return str1.Remove(0,2);
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test("abcab"));
+            Console.WriteLine(test("python"));
+            Console.WriteLine(test("abcda"));
+            Console.WriteLine(test("jython"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            if (str1.StartsWith("a") && str1.Substring(str1.Length -1) == "a")
+            {
+                return str1.Remove(str1.Length - 1).Remove(0,1);
+            }
+            else if (str1.StartsWith("a"))
+            {
+                return str1.Remove(0, 1);
+            }
+            else if (str1.Substring(str1.Length -1) == "a")
+            {
+                return str1.Remove(str1.Length -1);
+            }
+            return str1;
 
 
 
 
 
+     static void Main(string[] args)
+        {
+            Console.WriteLine(test("abcab"));
+            Console.WriteLine(test("python"));
+            Console.WriteLine(test("aacda"));
+            Console.WriteLine(test("jython"));
+            Console.ReadLine();
+        }
 
+        public static string test(string str1)
+        {
+            if (str1.StartsWith("aa"))
+            {
+                return str1.Remove(0,2);
+            }
+            else if (str1.StartsWith("a"))
+            {
+                return str1.Remove(0, 1);
+            }
+            return str1;
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 10, 20, 40, 50 }));
+            Console.WriteLine(test(new[] { 5, 20, 40, 10 }));
+            Console.WriteLine(test(new[] { 10, 20, 40, 10 }));
+            Console.WriteLine(test(new[] { 12, 24, 35, 55 }));
+        }
 
+        public static bool test(int[] nums)
+        {
+            return nums[0] == 10 || nums[nums.Length - 1] == 10;
+        }
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 10, 20, 40, 50 }));
+            Console.WriteLine(test(new[] { 10, 20, 40, 10 }));
+            Console.WriteLine(test(new[] { 12, 24, 35, 55 }));
+        }
 
+        public static bool test(int[] nums)
+        {
+            return nums[0] ==  nums[nums.Length - 1];
+        }
 
 
 
 
 
+     static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 10, 20, 40, 50 }, new[] { 10, 20, 40, 50 }));
+            Console.WriteLine(test(new[] { 10, 20, 40, 50 }, new[] { 10, 20, 40, 5 }));
+            Console.WriteLine(test(new[] { 10, 20, 40, 50 }, new[] { 1, 20, 40, 5 }));
+            Console.ReadLine();
+        }
 
+        public static bool test(int[] num1, int[] num2)
+        {
+            if (num1[0] == num2[0] || num1[num1.Length - 1] == num2[num2.Length - 1])
+            {
+                return true;
+            }
+            return false;
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 10, 20, 30, 40, 50 }));
+            Console.WriteLine(test(new[] { 10, 20, -30, -40, 50 }));
+            Console.ReadLine();
+        }
 
+        public static int test(int[] num1)
+        {
+            return num1.Sum();
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 10, 20, -30, -40 });
 
+            Console.Write("Rotated array: ");
 
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public static int[] test(int[] nums)
+        {
+            return new int[] { nums[1], nums[2], nums[3], nums[0] };
+        }
 
 
 
