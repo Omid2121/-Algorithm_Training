@@ -1883,57 +1883,514 @@ static void Main(string[] args)
 
 
 
+static void Main(string[] args)
+        {
+            int[] item = test(new[] { 10, 20, -30, -40, 50 });
+
+            Console.Write("Reverse array: ");
+
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] nums)
+        {
+            return new int[] { nums[4], nums[3], nums[2], nums[1], nums[0] };
+        }
+
+
+
+
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 10, 20, -30, -40 });
+
+            Console.Write("New array: ");
+
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] nums)
+        {
+            int max = nums.Max();
+            return new int[] { max, max, max, max };
+        }
+
+
+
+
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 10, 20, -30, -40, 30 }, new[]{ 10, 20, 30 ,40, 30});
+
+            Console.Write("New array: ");
+
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] nums1, int[] num2)
+        {
+            return new int[] { nums1[2], num2[2] };
+        }
+
+
+
+
+
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 10, 20, -30, -40, 30 });
+
+            Console.Write("New array: ");
+
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] num1)
+        {
+            return new int[] { num1[0], num1[num1.Length -1] };
+        }
+
+
+
+
+
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 12, 20 }));
+            Console.WriteLine(test(new[] { 14, 15 }));
+            Console.WriteLine(test(new[] { 11, 21 }));
+        }
+
+        public static bool test(int[] num1)
+        {
+            return num1[0] == 15 || num1[0] == 20 || num1[1] == 15 || num1[1] == 20;
+        }
+
+
+
+
+
+     static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 12, 20 }));
+            Console.WriteLine(test(new[] { 14, 15 }));
+            Console.WriteLine(test(new[] { 11, 21 }));
+        }
+
+        public static bool test(int[] num1)
+        {
+            return num1[0] != 15 && num1[0] != 20 && num1[1] != 15 && num1[1] != 20;
+        }
+
+
+
+
+
+    //**
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 10, 20, -30, -40, 30 });
+            Console.Write("New array: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] num1)
+        {
+            int elemets = num1.Length * 2;
+            int[] doubleNums = new int[elemets];
+
+            doubleNums[0] = num1[0];
+            return doubleNums;
+        }
+
+
+
+
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 12, 20 }));
+            Console.WriteLine(test(new[] { 20, 20 }));
+            Console.WriteLine(test(new[] { 10, 10 }));
+            Console.WriteLine(test(new[] { 10 }));
+        }
+
+        public static bool test(int[] nums)
+        {
+            if (nums.Length > 1 && (nums[0] == 10 && nums[1] == 10) || (nums[0] == 20 && nums[1] == 20))
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+
+
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 1, 5, 7 });
+            Console.Write("New array: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] nums)
+        {
+            for (int i = 0; i < nums.Length -1 ; i++)
+            {
+                if (nums[i] == 5 && nums[i + 1] == 7)
+                {
+                    nums[i + 1] = 1;
+                }
+            }
+            return nums;
+        }
+
+
+
+
+
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 10, 20, -30 }, new[] { 10, 20, 30 });
+            Console.Write("Larger array: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] num1, int[] num2)
+        {
+            if (num1[0] + num1[1] + num2[2] >= num2[0] + num2[1] + num2[2])
+            {
+                return num1;
+            }
+            return num2;
+        }
+
+
+
+
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 1, 5, 7, 9, 11, 13 });
+            Console.Write("New array: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] num1)
+        {
+            return new int[] {num1[num1.Length / 2 -1], num1[num1.Length / 2]};
+        }
+
+
+
+
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 10, 20, 30 }, new[] { 40, 50, 60 });
+            Console.Write("New array: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] num1, int[] num2)
+        {
+            return new int[] {num1[0], num1[1], num1[2], num2[0], num2[1], num2[2]};
+        }
+
+
+
+
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 1, 5, 7, 9, 11, 13 });
+            Console.Write("After swapping first and last elements: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] nums)
+        {
+            int first = nums[0];
+            nums[0] = nums[nums.Length - 1];
+            nums[nums.Length - 1] = first;
+
+            return nums;
+        }
+
+
+
+
+
+    //**
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 1 }));
+            Console.WriteLine(test(new[] { 1, 2, 9 }));
+            Console.WriteLine(test(new[] { 1, 2, 9, 3, 3 }));
+            Console.WriteLine(test(new[] { 1, 2, 3, 4, 5, 6, 7 }));
+            Console.WriteLine(test(new[] { 1, 2, 2, 3, 7, 8, 9, 10, 6, 5, 4 }));
+        }
+
+        public static int test(int[] nums)
+        {
+            int first, middle, last, max;
+            first = nums[0];
+            middle = nums[nums.Length / 2];
+            last = nums[nums.Length - 1];
+            max = first;
+
+            if (middle > max)
+            {
+                max = middle;
+            }
+            if (last > max)
+            {
+                max = last;
+            }
+            return max;
+
+
+
+
+    //**
+     static void Main(string[] args)
+        {
+            int[] item = test(new[] { 1, 5, 7, 9, 11, 13 });
+            Console.Write("New array: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] nums)
+        {
+            int[] frontNum;
+            if (nums.Length >= 2)
+            {
+                frontNum = new int[] { nums[0], nums[1] };
+            }
+            else if (nums.Length > 0)
+            {
+                frontNum = new int[] { nums[0] };
+            }
+            else
+            {
+                frontNum = new int[0];
+            }
+            return frontNum;
+        }
+
+
+
+
+
+     static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 1, 5, 7, 9, 10, 12 }));
+        }
+
+        public static int test(int[] nums)
+        {
+            int even = 0;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] % 2 == 0)
+                {
+                    even++;
+                }
+            }return even;
+        }
 
 
 
 
 
 
+    //**
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 1, 5, 7, 9, 10, 12 }));
+        }
+
+        public static int test(int[] nums)
+        {
+            int smallNum = 0, bigNum = 0;
+            if (nums.Length > 0)
+            {
+                smallNum = bigNum = nums[0];
+            }
+            for (int i = 0; i < nums.Length; i++)
+            {
+                smallNum = Math.Min(smallNum, nums[i]);
+                bigNum = Math.Max(bigNum, nums[i]);
+            }return bigNum - smallNum;
+        }
+
+
+
+
+
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 1, 5, 7, 9, 10, 17 }));
+        }
+
+        public static int test(int[] nums)
+        {
+            int sum = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] != 17)
+                {
+                    sum += nums[i];
+                }
+            }
+                return sum;
+        }
 
 
 
 
 
 
+    //*
+     static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 5, 6, 1, 5, 6, 9, 10, 17, 5, 6 }));
+            Console.WriteLine(test(new[] { 5, 6, 1, 5, 6, 9, 10, 17 }));
+            Console.WriteLine(test(new[] { 1, 5, 6, 9, 10, 17, 5, 6 }));
+            Console.WriteLine(test(new[] { 1, 5, 9, 10, 17, 5, 6 }));
+            Console.WriteLine(test(new[] { 1, 5, 9, 10, 17, 5 }));
+        }
+
+        public static int test(int[] nums)
+        {
+            int sum = 0;
+            int inSection = 0;
+            int flag = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                inSection = 0;
+                if (nums[i] == 5)
+                {
+                    inSection = 0;
+                    flag = 1;
+                }
+                if (inSection == 0 && nums[i] == 6)
+                {
+                    if (flag == 1)
+                    {
+                        sum = sum - 5;
+                        inSection = 1;
+                    }
+                    flag = 0;
+                }
+                if (inSection == 0)
+                {
+                    sum += nums[i];
+                }
+            }
+            return sum;
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 1, 5, 6, 9, 10, 17 }));
+            Console.WriteLine(test(new[] { 1, 5, 5, 9, 10, 17 }));
+            Console.WriteLine(test(new[] { 1, 5, 5, 9, 10, 17, 5, 5 }));
+        }
+
+        public static bool test(int[] nums)
+        {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 5 && nums[i + 1] == 5)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 1, 5, 6, 9, 10, 17 }));
+            Console.WriteLine(test(new[] { 1, 4, 7, 9, 10, 17 }));
+            Console.WriteLine(test(new[] { 1, 1, 2, 9, 10, 17}));
+        }
+
+        public static bool test(int[] nums)
+        {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 5 || nums[i] == 7)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
 
 
 
 
+     static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 1, 5, 6, 9, 10, 17 }));
+            Console.WriteLine(test(new[] { 1, 5, 5, 5, 10, 17 }));
+            Console.WriteLine(test(new[] { 1, 1, 5, 5, 5, 5 }));
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public static bool test(int[] nums)
+        {
+                int sum = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 5)
+                {
+                    sum += 5;
+                }
+            }
+            return sum == 15;
+        }
 
 
 

@@ -10,19 +10,22 @@ namespace test
     {
         static void Main(string[] args)
         {
-            int[] item = test(new[] { 10, 20, -30, -40 });
-
-            Console.Write("Rotated array: ");
-
-            foreach (var i in item)
-            {
-                Console.Write(i.ToString() + " ");
-            }
+            Console.WriteLine(test(new[] { 1, 5, 6, 9, 10, 17 }));
+            Console.WriteLine(test(new[] { 1, 5, 5, 5, 10, 17 }));
+            Console.WriteLine(test(new[] { 1, 1, 5, 5, 5, 5 }));
         }
 
-        public static int[] test(int[] nums)
+        public static bool test(int[] nums)
         {
-            return new int[] { nums[1], nums[2], nums[3], nums[0] };
+                int sum = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 5)
+                {
+                    sum += 5;
+                }
+            }
+            return sum == 15;
         }
     }
 }
