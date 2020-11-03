@@ -10,22 +10,25 @@ namespace test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(test(new[] { 1, 5, 6, 9, 10, 17 }));
-            Console.WriteLine(test(new[] { 1, 5, 5, 5, 10, 17 }));
-            Console.WriteLine(test(new[] { 1, 1, 5, 5, 5, 5 }));
+            int[] item = test(new[] { 1, 2, 0, 3, 5, 7, 0, 9, 11 });
+            Console.Write("New array: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
         }
 
-        public static bool test(int[] nums)
+        public static int[] test(int[] nums)
         {
-                int sum = 0;
+            int pos = 0;
             for (int i = 0; i < nums.Length; i++)
             {
-                if (nums[i] == 5)
+                if (nums[i] == 0)
                 {
-                    sum += 5;
+                    nums[i] = nums[pos];
+                    nums[pos++] = 0;
                 }
-            }
-            return sum == 15;
+            }return nums;
         }
     }
 }
