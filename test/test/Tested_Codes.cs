@@ -2802,127 +2802,450 @@ static void Main(string[] args)
 
 
 
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 1, 2, 5, 3, 5, 7, 5, 9, 11 });
+            Console.Write("New array: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] nums)
+        {
+            int size = nums.Length, index = 0;
+            int[] array = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                if (nums[i] != 5)
+                {
+                    array[index] = nums[i];
+                }
+            }return array;
+
+
+
+     
+
+
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 1, 2, 5, 3, 5, 4, 6, 9, 11 });
+            Console.Write("New array: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static int[] test(int[] nums)
+        {
+            int index = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] % 2 == 0)
+                {
+                    nums[index] = nums[i];
+                    nums[i] = nums[index];
+                    index++;
+                }
+            }return nums;
+        }
+
+
+
+
+
+
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 5, 5, 1, 5, 5 }));
+            Console.WriteLine(test(new[] { 1, 2, 3, 4 }));
+            Console.WriteLine(test(new[] { 3, 3, 5, 5, 5, 5 }));
+            Console.WriteLine(test(new[] { 1, 5, 5, 7, 8, 10 }));
+        }
+
+        public static bool test(int[] nums)
+        {
+            for (int i = 0; i < nums.Length -1 ; i++)
+            {
+                if (nums[i] > nums[i + 1])
+                {
+                    return false;
+                }
+            }return true;
+        }
+
+
+
+
+
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 5, 5, 1, 15, 15 }));
+            Console.WriteLine(test(new[] { 15, 2, 3, 4, 15 }));
+            Console.WriteLine(test(new[] { 3, 3, 15, 15, 5, 5 }));
+            Console.WriteLine(test(new[] { 1, 5, 15, 7, 8, 15 }));
+        }
+
+        public static bool test(int[] nums)
+        {
+            for (int i = 0; i < nums.Length - 1 ; i++)
+            {
+                if (nums[i + 1] == nums[i] && nums[i] == 15 )
+                {
+                    return true;
+                }
+            }return false;
+        }
+
+
+
+
 
 
+    //**
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(new[] { 1, 2, 3, 4, 6, 8 }));
+            Console.WriteLine(test(new[] { 15, 2, 3, 4, 15, 11 }));
+        }
 
+        public static int test(int[] numbers)
+        {
+            var firstHalf = Average(numbers, 0, numbers.Length / 2);
+            var secondHalf = Average(numbers, numbers.Length / 2, numbers.Length);
+            if (firstHalf > secondHalf)
+            {
+                return firstHalf;
+            }return secondHalf;
+        }
+        static int Average(int[] num, int start, int end)
+        {
+            var sum = 0;
+            for (int i = start; i < end; i++)
+            {
+                sum += num[i];
+            }
+                return sum / (num.Length / 2);
+        }
 
 
 
 
 
+
+     static void Main(string[] args)
+        {
+            Console.WriteLine("Number of Strings: ");
+            Console.WriteLine(test(new[] { "a", "b", "bb", "c", "ccc" }, 1));
+        }
+
+        public static int test(string[] arrayStr, int len)
+        {
+            int counter = 0;
+            for (int i = 0; i < arrayStr.Length; i++)
+            {
+                if (arrayStr[i].Length == len)
+                {
+                    counter++;
+                }
+            }return counter;
+        }
+
+
+
+
+
+    static void Main(string[] args)
+        {
+            string[] item = test(new[] { "a", "b", "bb", "c", "ccc" }, 3);
+            Console.Write("New array: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static string[] test(string[] arrayStr, int n)
+        {
+            string[] newArray = new string[n];
+            for (int i = 0; i < n; i++)
+            {
+                newArray[i] = arrayStr[i];
+            }return newArray;
+        }
+
+
+
+
+
+    //**
+    static void Main(string[] args)
+        {
+            ArrayList item = test(new[] { "a", "aaa","b", "bbb", "c", "ccc" }, 3);
+            Console.Write("New array: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
+
+        public static ArrayList test(string[] arrayStr, int n)
+        {
+            ArrayList resultArray = new ArrayList();
+            for (int i = 0; i < arrayStr.Length; i++)
+            {
+                if (arrayStr[i].Length == n)
+                {
+                    resultArray.Add(arrayStr[i]);
+                }
+            }return resultArray;
+        }
 
 
 
 
+
+    static void Main(string[] args)
+        {
+            Console.WriteLine(test(123));
+            Console.WriteLine(test(13));
+            Console.WriteLine(test(222));
+        }
+
+        public static bool test(int n)
+        {
+            while (n > 0)
+            {
+                if (n % 10 == 2)
+                {
+                    return true;
+                }
+                n /= 10;
+            }return false;
+            
+        }
 
 
 
 
+    //**
+    static void Main(string[] args)
+        {
+            int[] item = test(new[] { 1, 2, 3, 5, 7, 9, 10 }, 3);
+            Console.Write("New array: ");
+            foreach (var i in item)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
 
+        public static int[] test(int[] nums, int count)
+        {
+            int[] evens = new int[count];
+            int j = 0;
+            for (int i = 0; j < count; i++)
+            {
+                if (nums[i] % 2 != 0)
+                {
+                    evens[j] = nums[i];
+                    j++;
+                }
+            }
+            return evens;
+        }
 
 
 
 
+    //**
+     static void Main(string[] args)
+        {
+            List<int> mylist = test(new List<int>(new int[] { 1, 2, 3, 4 }));
+            foreach (var i in mylist)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
 
+        public static List<int> test(List<int> nums)
+        {
+            IEnumerable<int> doubled = nums.Select(x => x *= 3);
+            return doubled.ToList<int>();
+        }
 
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            List<int> mylist = test(new List<int>(new int[] { 1, 2, 3, 4 }));
+            foreach (var i in mylist)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
 
+        public static List<int> test(List<int> nums)
+        {
+            IEnumerable<int> squared = nums.Select(x => x * x * x);
+            return squared.ToList<int>();
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            List<string> mylist = test(new List<string>(new string[] { "1", "2", "3", "4" }));
+            foreach (var i in mylist)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
 
+        public static List<string> test(List<string> str)
+        {
+            IEnumerable<string> s = str.Select(x => "#" + x + "#");
+            return s.ToList();
+        }
 
 
 
 
 
 
+     static void Main(string[] args)
+        {
+            List<string> mylist = test(new List<string>(new string[] { "1", "2", "3", "4" }));
+            foreach (var i in mylist)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
 
+        public static List<string> test(List<string> str)
+        {
+            IEnumerable<string> s = str.Select(x => x = x + x + x + x);
+            return s.ToList();
+        }
 
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            List<int> mylist = test(new List<int>(new int[] { 1, 2, 3, 4 }));
+            foreach (var i in mylist)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
 
+        public static List<int> test(List<int> num)
+        {
+            IEnumerable<int> s = num.Select(x => 5 * (x + 2));
+            return s.ToList();
+        }
 
 
 
 
 
+     static void Main(string[] args)
+        {
+            List<int> mylist = test(new List<int>(new int[] { 10, 22, 35, 41 }));
+            foreach (var i in mylist)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
 
+        public static List<int> test(List<int> num)
+        {
+            IEnumerable<int> s = num.Select(x => x % 10);
+            return s.ToList();
+        }
 
 
 
 
 
+static void Main(string[] args)
+        {
+            List<string> mylist = test(new List<string>(new string[] { "Abc", "cdef", "js", "php" }));
+            foreach (var i in mylist)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
 
+        public static List<string> test(List<string> str)
+        {
+            IEnumerable<string> s = str.Select(x => x.ToUpper());
+            return s.ToList();
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            List<string> mylist = test(new List<string>(new string[] { "abc", "cdaef", "js", "php" }));
+            foreach (var i in mylist)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
 
+        public static List<string> test(List<string> str)
+        {
+            return str.Select(x => x.Replace("a","")).ToList();
+        }
 
 
 
 
+    //**
+static void Main(string[] args)
+        {
+            List<int> mylist = test(new List<int>(new int[] { 0, -2, 1, 2, 3, 5, 4, 7, 8 }));
+            foreach (var i in mylist)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
 
+        public static List<int> test(List<int> nums)
+        {
+            return nums.Where(n => n < 4).ToList();
+        }
 
 
 
 
 
+    static void Main(string[] args)
+        {
+            List<int> mylist = test(new List<int>(new int[] { 10, 22, 35, 47, 53, 67 }));
+            foreach (var i in mylist)
+            {
+                Console.Write(i.ToString() + " ");
+            }
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public static List<int> test(List<int> nums)
+        {
+            return nums.Where(n => n % 10 < 7).ToList();
+        }
 
 
 
